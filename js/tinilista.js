@@ -9,7 +9,7 @@ function deleteClick(){
     for(let span of spans){
         span.addEventListener("click", function(){
             span.parentElement.remove();
-            event.stopPropagation();
+            // event.stopPropagation();
         });
     }
 }
@@ -35,8 +35,6 @@ input.addEventListener("keypress",function(pressedKey){
     }
 });
 
-
-
 // strike through finished task
 lista.addEventListener('click', function(ev){
     if(ev.target.tagName === "LI"){
@@ -45,3 +43,25 @@ lista.addEventListener('click', function(ev){
 },false
 );
 
+// button functionality
+var save = document.querySelector('.save');
+var clear = document.querySelector('.clear');
+
+save.addEventListener('click', function(){
+    localStorage.setItem('tiniLista', lista.innerHTML);
+});
+
+function loadLista(){
+    if(localStorage.getItem('tiniLista')){
+        lista.innerHTML = localStorage.getItem('tiniLista');
+        deleteClick();
+    }
+}
+
+clear.addEventListener('click', function(){
+  lista.innerHTML = "";
+  localStorage.removeItem('tiniLista', lista.innerHTML);
+});
+
+loadLista();
+deleteClick();
