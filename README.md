@@ -6,6 +6,6 @@ Exploring things that can be done with vanilla JS. Probably will compile with Ph
 * Add item to list
 * Cross over finished task
 * Delete unwanted tasks
-* Save list to device (download)
-* Clear list
-* Set up notifications?
+* Save list to browser using localStorage();
+* Clear list - localStorage();
+* Add a tips button
