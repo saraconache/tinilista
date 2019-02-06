@@ -103,7 +103,7 @@ ul li:before {
   }
 .scrollable{
     overflow: auto;
-    height:400px;
+    height:325px;
 }
 #overlay{
     position: fixed;
