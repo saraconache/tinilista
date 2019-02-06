@@ -66,3 +66,12 @@ clear.addEventListener('click', function(){
 
 loadLista();
 deleteClick();
+
+
+var tips = document.querySelector(".tips");
+tips.addEventListener('click', function(){
+    document.getElementById("overlay").style.display ="block";
+});
+overlay.addEventListener('click', function(){
+    document.getElementById("overlay").style.display ="none";
+})
