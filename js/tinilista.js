@@ -43,7 +43,7 @@ lista.addEventListener('click', function(ev){
 },false
 );
 
-// button functionality
+// button-menu functionality
 var save = document.querySelector('.save');
 var clear = document.querySelector('.clear');
 
@@ -51,7 +51,7 @@ save.addEventListener('click', function(){
     localStorage.setItem('tiniLista', lista.innerHTML);
 });
 
-function loadLista(){
+function loadLista(){ //if there is anything stored in localStorage();
     if(localStorage.getItem('tiniLista')){
         lista.innerHTML = localStorage.getItem('tiniLista');
         deleteClick();
@@ -62,6 +62,7 @@ clear.addEventListener('click', function(){
   lista.innerHTML = "";
   localStorage.removeItem('tiniLista', lista.innerHTML);
 });
+
 
 loadLista();
 deleteClick();

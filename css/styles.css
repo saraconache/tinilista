@@ -44,8 +44,6 @@ li{
     cursor: pointer;
     font-family: 'Caveat';
     font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
     border-bottom: 0.5px solid #eeebeb;
 }
 h1{
@@ -56,6 +54,7 @@ h1{
 span{
     color: lightgray;
     vertical-align: middle;
+     float: right;
 }
 input[type=text]{
     width: 100%;
@@ -74,6 +73,12 @@ button{
     cursor: pointer;
     color: #808080;
 }
+button:hover{
+    color: #f7c115;
+}
+button:active{
+    transform: scale(1.2);
+}
 #buttons{
     margin: 0 auto;
     width: 80%;
@@ -82,11 +87,16 @@ button{
 }
 ul {
     list-style-type: none;
+    margin-left: -15px;
 }
   
 ul li:before {
     color: #f7c115;
     content: '\2014';
-    position: absolute;
+    position: relative;
     margin-left: -20px;
   }
+.scrollable{
+    overflow: auto;
+    height:400px;
+}
